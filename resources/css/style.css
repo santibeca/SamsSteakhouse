@@ -39,9 +39,9 @@ h1 {
 }
 
 .button:hover {
-    background-color: #600E0D;
-    border: #030303 4px solid;
+  background-color: #000000;
 }
+
 
 .button a {
     font-size: 1rem;
@@ -52,10 +52,11 @@ h1 {
     text-decoration: none;
 }
 
+
 /*FOOTER*/
 .footer-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     padding: 10px;
     background-color: #600E0D;
@@ -93,6 +94,7 @@ h1 {
     color: #eff5f4;
     font-size: 1.5rem;
     padding: 5px 10px;
+    
 
 
 }
@@ -107,7 +109,7 @@ header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background-color: #FCF8E8;
     align-items: center;
     padding-top: 5px;
@@ -127,7 +129,7 @@ header {
 nav {
     display: flex;
     padding: 0%;
-    margin-right: 30px;
+    
 
 }
 
@@ -138,7 +140,7 @@ nav ul li {
 
 nav li a {
     font-family: Montserrat;
-    font-size: 1rem;
+    font-size: .9rem;
     color: #600E0D;
     text-decoration: none;
     padding: 0 8px;
@@ -150,6 +152,10 @@ nav li a:hover {
     font-weight: bolder;
     text-decoration: underline;
 }
+nav li a:active {
+    font-size: 1rem;
+}
+
 
 
 /***************************************************************************************HERO IMAGE*************************************************************************************/
@@ -182,20 +188,33 @@ nav li a:hover {
 @media only screen and (max-width: 450px) {
 
     .navigation-container {
-        flex-wrap: nowrap;
-        flex-direction: row;
+        flex-wrap: wrap;
+        flex-direction: column;
         justify-content: space-between;
     }
 
     nav ul {
         display: flex;
-        flex-direction: column;
-    }
+        flex-direction:row;
+        justify-content: center;
 
-    nav ul li {
+    }
+    nav ul li{
+        display: flex;
         font-weight: bold;
     }
 
+    nav ul li p{
+        font-weight: bold;
+        font-size: 1rem;
+
+    }
+    nav ul li a{
+        justify-content: center;
+        align-items: center;
+        padding: 0px 4px 6px 4px;
+        text-decoration: underline;
+    }
     .footer-adress p {
         display: none;
     }
@@ -317,7 +336,7 @@ nav li a:hover {
    .phone-number{
        
        color: #000000;
-       font-size: 1.7rem;
+       font-size: 1.3rem;
        cursor: pointer;
    }
 .email-us {
@@ -425,7 +444,7 @@ nav li a:hover {
 }
 
 .menu-navigation h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-decoration: underline;
     font-weight: bold;
     width: 100%;
@@ -437,7 +456,7 @@ nav li a:hover {
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #eff5f4;
-    padding: 15px 0;
+    padding: 5px 0;
 
 }
 
@@ -445,7 +464,7 @@ nav li a:hover {
     text-align: center;
     font-family: Allura;
     font-size: 3rem;
-    padding: 10px auto;
+    padding: 5px auto;
     color: black;
     width: 100%;
 }
@@ -504,6 +523,13 @@ nav li a:hover {
     .button {
         flex: 1;
     }
+    .menu-navigation{
+        flex-direction: column;
+    }
+    .menu-navigation h1 {
+        padding: 5px;
+        font-size: .7rem;
+    }
 
     .menu-navigation h1 {
         font-size: 2rem;
@@ -511,6 +537,10 @@ nav li a:hover {
 
     .menu-container {
         flex-direction: column;
+    }
+    .menu-container h1{
+        margin: 0;
+        padding: 0%;
     }
 
     .menu-item {
@@ -538,3 +568,32 @@ nav li a:hover {
     height: 600px;
     width: 600px;
 }
+
+/**************************EVENTS********************************************************************************************************/
+.event-container{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.event-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+  
+    
+}
+.event-box h1{
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+@media only screen and (max-width: 460px) {
+    .event-container{
+        flex-wrap: wrap;
+    }
+}
+
